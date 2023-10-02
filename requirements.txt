@@ -1,0 +1,7 @@
+pandas
+numpy
+seaborn
+django
+flask
+
+# -e .
