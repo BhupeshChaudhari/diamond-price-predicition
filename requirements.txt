@@ -4,4 +4,4 @@ seaborn
 django
 flask
 
-# -e .
+-e .
