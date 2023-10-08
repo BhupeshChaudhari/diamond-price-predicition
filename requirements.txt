@@ -1,7 +1,8 @@
 pandas
 numpy
 seaborn
-django
+scikit-learn
 flask
+django
 
 -e .

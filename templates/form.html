@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Price Prediction</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Diamond Price Prediction</h1>
+    </header>
+    <main>
+      <div class="background-diamond"></div>
+      <div class="container">
+        <h2>Input Diamond Details</h2>
+        <form action="/predict" method="POST">
+          <label for="carat">Carat:</label>
+          <input type="number" id="carat" name="carat" step="0.01" required />
+
+          <label for="depth">Depth:</label>
+          <input type="number" id="depth" name="depth" step="0.01" required />
+
+          <label for="table">Table:</label>
+          <input type="number" id="table" name="table" step="0.01" required />
+
+          <label for="x">X:</label>
+          <input type="number" id="x" name="x" step="0.01" required />
+
+          <label for="y">Y:</label>
+          <input type="number" id="y" name="y" step="0.01" required />
+
+          <label for="z">Z:</label>
+          <input type="number" id="z" name="z" step="0.01" required />
+
+          <label for="cut">Cut:</label>
+          <select id="cut" name="cut" required>
+            <option value="Ideal">Ideal</option>
+            <option value="Premium">Premium</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+          </select>
+
+          <label for="color">Color:</label>
+          <select id="color" name="color" required>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+          </select>
+
+          <label for="clarity">Clarity:</label>
+          <select id="clarity" name="clarity" required>
+            <option value="IF">IF</option>
+            <option value="VVS1">VVS1</option>
+            <option value="VVS2">VVS2</option>
+            <option value="VS1">VS1</option>
+            <option value="VS2">VS2</option>
+            <option value="SI1">SI1</option>
+            <option value="SI2">SI2</option>
+            <option value="I1">I1</option>
+          </select>
+
+          <button type="submit">Predict Price</button>
+        </form>
+        <div class="result">
+          <p>
+            Predicted Price: $<span id="resultValue">{{ final_result }}</span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Diamond Price Prediction</p>
+    </footer>
+  </body>
+</html>
