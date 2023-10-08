@@ -30,14 +30,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 70px); /* Adjust based on your header height */
+  min-height: calc(100vh - 70px);
   padding: 20px;
-  position: relative; /* To position the diamond image */
+  position: relative;
 }
 
 /* Background diamond image */
 .background-diamond {
-  background-image: url("diamond_bg.jpg"); /* Use the correct path to your diamond image */
+  background-image: url("diamond_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,7 +49,6 @@ main {
   pointer-events: none;
 }
 
-/* Form container styles */
 .container {
   background-color: #fff;
   padding: 20px;
@@ -59,7 +58,6 @@ main {
   width: 100%;
 }
 
-/* Form styles */
 form {
   display: flex;
   flex-direction: column;
@@ -86,13 +84,11 @@ button {
   cursor: pointer;
 }
 
-/* Result container styles */
 .result {
   margin-top: 20px;
   text-align: center;
 }
 
-/* Footer styles */
 footer {
   background-color: #333;
   color: white;
@@ -100,7 +96,6 @@ footer {
   padding: 10px 0;
 }
 
-/* Responsive design */
 @media screen and (max-width: 600px) {
   main {
     padding: 10px;
